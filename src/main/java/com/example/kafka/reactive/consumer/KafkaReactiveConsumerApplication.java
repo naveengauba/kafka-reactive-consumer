@@ -73,8 +73,7 @@ public class KafkaReactiveConsumerApplication implements DisposableBean {
 
         // % CPU load the overall system is at, from 0.0-1.0
         double systemCpuLoad = osBean.getCpuLoad() * 100;
-        log.info("Timestamp/ProcessCpuLoad/SystemCpuLoad/messagesConsumed: {}, {}, {}, {}", DATE_FORMAT.format(new Date()), DECIMAL_FORMAT.format(processCpuLoad), DECIMAL_FORMAT.format(systemCpuLoad), messagesConsumed.get());
-        System.out.println();
+        log.info("Timestamp/ProcessCpuLoad/SystemCpuLoad/messagesConsumed: \n{}, {}, {}, {}", DATE_FORMAT.format(new Date()), DECIMAL_FORMAT.format(processCpuLoad), DECIMAL_FORMAT.format(systemCpuLoad), messagesConsumed.get());
     }
 
     @Override
